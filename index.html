@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Tracker</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🏋️ Fitness Tracker</h1>
+
+<button class="dark-btn" onclick="toggleDarkMode()">
+🌙 Dark Mode
+</button>
+
+<div class="card">
+<h2>Add Activity</h2>
+
+<select id="exercise">
+<option>Running</option>
+<option>Walking</option>
+<option>Cycling</option>
+<option>Workout</option>
+</select>
+
+<input type="number" id="steps" placeholder="Steps">
+
+<input type="number" id="duration"
+placeholder="Duration (Minutes)">
+
+<input type="number" id="calories"
+placeholder="Calories Burned">
+
+<button onclick="addActivity()">
+Save Activity
+</button>
+</div>
+
+<div class="card">
+<h2>Today's Summary</h2>
+
+<p>Total Steps:
+<span id="totalSteps">0</span>
+</p>
+
+<p>Total Calories:
+<span id="totalCalories">0</span>
+</p>
+
+<div class="progress">
+<div class="progress-bar"
+id="progressBar">
+0%
+</div>
+</div>
+
+</div>
+
+<div class="card">
+<h2>Workout History</h2>
+<ul id="history"></ul>
+</div>
+
+<div class="card">
+<h2>BMI Calculator</h2>
+
+<input type="number"
+id="weight"
+placeholder="Weight (kg)">
+
+<input type="number"
+id="height"
+placeholder="Height (cm)">
+
+<button onclick="calculateBMI()">
+Calculate BMI
+</button>
+
+<p id="bmiResult"></p>
+</div>
+
+<div class="card">
+<h2>💧 Water Intake</h2>
+
+<input type="number"
+id="water"
+placeholder="Number of Glasses">
+
+<button onclick="saveWater()">
+Save Water Intake
+</button>
+
+<p id="waterCount"></p>
+
+</div>
+
+<div class="card">
+<h2>Weekly Progress</h2>
+
+<canvas id="myChart"></canvas>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
